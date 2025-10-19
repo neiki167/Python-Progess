@@ -1,0 +1,31 @@
+tasks = []
+
+is_running = True
+
+while is_running:
+    print("Menü")
+    print("1.Aufgaben hinzufügen")
+    print("2.Aufgaben löschen")
+    print("3.Quit")
+    
+    choice = input("Wähle eine Option (1-4): ")
+
+    if choice == '1':
+        tasks.append(input("Neue Aufgabe hinzufügen: "))
+        print("Aktuelle Aufgaben:", tasks)
+        1
+    elif choice == '2':
+        print("Aktuelle Aufgaben:", tasks)
+        task_remove = input("Welche Aufgabe löschen? ")
+        if task_remove in tasks:
+            tasks.remove(task_remove)
+            print("Aufgabe gelöscht!")
+        else:
+            print("Aufgabe nicht gefunden")
+    
+    elif choice == '3':
+        is_running = False
+    else:
+        print("Ungültige Eingabe!")
+
+
